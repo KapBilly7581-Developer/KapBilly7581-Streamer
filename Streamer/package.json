@@ -1,0 +1,24 @@
+{
+  "name": "kapbilly-streamer-cluster",
+  "version": "1.0.0",
+  "description": "KapBilly7581 • Streamer Selfbot Sistemi — Discord hesaplarını ses kanallarına bağlayıp video/camera stream yapar.",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.14.12",
+    "discord-stream-client": "^1.1.4",
+    "play-dl": "^1.9.7",
+    "path": "^0.12.7",
+    "fs": "^0.0.1-security",
+    "tweetnacl": "^1.0.3",
+    "libsodium-wrappers": "^0.7.13"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "KapBilly7581",
+  "license": "MIT"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "kapbilly-streamer-system",
+  "version": "1.0.0",
+  "description": "KapBilly7581 • Live, Cam And Voice Self Bot System - Discord.js v14 tabanlı streamer token yönetim altyapısı.",
+  "main": "kapbilly.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node kapbilly.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "KapBilly7581",
+  "license": "MIT"
+}
