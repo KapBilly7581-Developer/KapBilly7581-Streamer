@@ -1,5 +1,4 @@
-// Streamer By Wraiths (KapBilly7581)
-// KapBilly7581 sadece projeyi geliştirmiştir.
+// Streamer By KapBilly7581
 
 require('./polyfill.js');
 const { Client } = require("discord.js-selfbot-v13");
