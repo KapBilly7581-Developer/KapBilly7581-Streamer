@@ -2,7 +2,7 @@
 
 ## 📜 Not 📜
 
-- Streamer projesi [Wraiths](https://youtube.com/@wraithsdev) Wraiths'ye ait KapBilly7581 sadece projeyi biraz daha geliştirip discord bot ile bağlantılı yapmıştır.
+- Projede /KapBilly7581-Streamer-main/Streamer/ klasöründe videos.json , polyfill.js ve main.js (main.js güncellendi data base ye uyumlu hale geldi) [Wraiths](https://youtube.com/@wraithsdev) Wraiths'ye ait.
 - Kötü amaclı yazılım yoktur tüm kodlar public bir şekilde bu proje bedava şekildedir satılamaz.
 - Proje Mit lisans ile korunmaktadır eğer izinsiz kod dosyalarini değiştirip yayınlanırsa telif hakkı ile cezalandırılır tazminata kadar da yolu vardır.
 
