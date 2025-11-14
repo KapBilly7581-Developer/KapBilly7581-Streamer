@@ -1,4 +1,4 @@
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581 
 const { Readable } = require('stream');
 // Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
 if (typeof globalThis.File === 'undefined') {
@@ -8,50 +8,50 @@ if (typeof globalThis.File === 'undefined') {
       this.type = options.type || '';
       this.lastModified = options.lastModified || Date.now();
       this.webkitRelativePath = '';
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581 
       this._chunks = Array.isArray(chunks) ? chunks.map(c => {
         if (Buffer.isBuffer(c)) return c;
         if (typeof c === 'string') return Buffer.from(c);
         return Buffer.from([]);
       }) : [];
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       this.size = this._chunks.reduce((acc, c) => acc + c.length, 0);
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     slice(start = 0, end = this.size, contentType = this.type) {
       const slicedChunks = [];
       let copied = 0;
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       for (const chunk of this._chunks) {
         if (copied + chunk.length <= start) {
           copied += chunk.length;
           continue;
         }
         if (copied >= end) break;
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
         const s = Math.max(0, start - copied);
         const e = Math.min(chunk.length, end - copied);
         slicedChunks.push(chunk.slice(s, e));
         copied += chunk.length;
       }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       return new File(slicedChunks, this.name, { type: contentType, lastModified: this.lastModified });
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     stream() {
       return Readable.from(this._chunks);
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     text() {
       return Promise.resolve(Buffer.concat(this._chunks).toString());
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     arrayBuffer() {
       return Promise.resolve(Uint8Array.from(Buffer.concat(this._chunks)).buffer);
     }
   };
 }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
 if (typeof globalThis.Blob === 'undefined') {
   globalThis.Blob = class Blob {
     constructor(chunks = [], options = {}) {
@@ -61,41 +61,41 @@ if (typeof globalThis.Blob === 'undefined') {
         if (typeof c === 'string') return Buffer.from(c);
         return Buffer.from([]);
       }) : [];
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       this.size = this._chunks.reduce((acc, c) => acc + c.length, 0);
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     slice(start = 0, end = this.size, contentType = this.type) {
       const slicedChunks = [];
       let copied = 0;
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       for (const chunk of this._chunks) {
         if (copied + chunk.length <= start) {
           copied += chunk.length;
           continue;
         }
         if (copied >= end) break;
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
         const s = Math.max(0, start - copied);
         const e = Math.min(chunk.length, end - copied);
         slicedChunks.push(chunk.slice(s, e));
         copied += chunk.length;
       }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
       return new Blob(slicedChunks, { type: contentType });
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     stream() {
       return Readable.from(this._chunks);
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
     text() {
       return Promise.resolve(Buffer.concat(this._chunks).toString());
     }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581 
     arrayBuffer() {
       return Promise.resolve(Uint8Array.from(Buffer.concat(this._chunks)).buffer);
     }
   };
 }
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
