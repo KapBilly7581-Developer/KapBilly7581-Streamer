@@ -1,6 +1,6 @@
 // Streamer By KapBilly7581 
 const { Readable } = require('stream');
-// Streamer By Wraiths (KapBilly7581 sadece projeyi geliştirmiş ve bot ile eşleştirme yapmıştır.)
+// Streamer By KapBilly7581
 if (typeof globalThis.File === 'undefined') {
   globalThis.File = class File {
     constructor(chunks, filename, options = {}) {
